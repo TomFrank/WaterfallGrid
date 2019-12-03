@@ -16,7 +16,7 @@ struct CardsGrid: View {
         
         #if os(iOS) && !targetEnvironment(macCatalyst)
 
-        return WaterfallGrid((0..<cards.count), id: \.self) { index in
+        return WaterfallGrid((0..<cards.count), id: \.self, contentBefore: {EmptyView()} ) { index in
             CardView(card: self.cards[index])
         }
         .gridStyle(

@@ -8,13 +8,14 @@ import SwiftUI
 
 /// A container that presents items of variable heights arranged in a grid.
 @available(iOS 13, OSX 10.15, tvOS 13, watchOS 6, *)
-public struct WaterfallGrid<Data, ID, Content>: View where Data : RandomAccessCollection, Content : View, ID : Hashable {
+public struct WaterfallGrid<Data, ID, ContentBefore, Content>: View where Data : RandomAccessCollection, ContentBefore : View, Content : View, ID : Hashable {
 
     @Environment(\.gridStyle) private var style
 
     private let data: Data
     private let dataId: KeyPath<Data.Element, ID>
     private let content: (Data.Element) -> Content
+    private let contentBefore: () -> ContentBefore
 
     @State private var loaded = false
 
@@ -43,20 +44,23 @@ public struct WaterfallGrid<Data, ID, Content>: View where Data : RandomAccessCo
         let columnWidth = self.columnWidth(columns: style.columns, spacing: style.spacing, padding: style.padding,
                                            scrollDirection: style.scrollDirection, geometrySize: geometry.size)
         return ScrollView(style.scrollDirection) {
-            ZStack(alignment: .topLeading) {
-                ForEach(data, id: self.dataId) { element in
-                    self.content(element)
-                        .frame(width: self.style.scrollDirection == .vertical ? columnWidth : nil,
-                               height: self.style.scrollDirection == .horizontal ? columnWidth : nil)
-                        .background(PreferenceSetter(id: element[keyPath: self.dataId]))
-                        .alignmentGuide(.top, computeValue: { _ in self.alignmentGuides[element[keyPath: self.dataId]]?.y ?? 0 })
-                        .alignmentGuide(.leading, computeValue: { _ in self.alignmentGuides[element[keyPath: self.dataId]]?.x ?? 0 })
-                        .opacity(self.alignmentGuides[element[keyPath: self.dataId]] != nil ? 1 : 0)
+            VStack(alignment: .leading, spacing: 0) {
+                self.contentBefore()
+                ZStack(alignment: .topLeading) {
+                    ForEach(data, id: self.dataId) { element in
+                        self.content(element)
+                            .frame(width: self.style.scrollDirection == .vertical ? columnWidth : nil,
+                                   height: self.style.scrollDirection == .horizontal ? columnWidth : nil)
+                            .background(PreferenceSetter(id: element[keyPath: self.dataId]))
+                            .alignmentGuide(.top, computeValue: { _ in self.alignmentGuides[element[keyPath: self.dataId]]?.y ?? 0 })
+                            .alignmentGuide(.leading, computeValue: { _ in self.alignmentGuides[element[keyPath: self.dataId]]?.x ?? 0 })
+                            .opacity(self.alignmentGuides[element[keyPath: self.dataId]] != nil ? 1 : 0)
+                    }
                 }
+                .padding(style.padding)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .animation(self.loaded ? self.style.animation : nil)
             }
-            .padding(style.padding)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .animation(self.loaded ? self.style.animation : nil)
         }
     }
 
@@ -100,12 +104,12 @@ extension WaterfallGrid {
     /// - Parameter data: A collection of data.
     /// - Parameter id: Key path to a property on an underlying data element.
     /// - Parameter content: A function that can be used to generate content on demand given underlying data.
-    public init(_ data: Data, id: KeyPath<Data.Element, ID>, content: @escaping (Data.Element) -> Content) {
+    public init(_ data: Data, id: KeyPath<Data.Element, ID>, @ViewBuilder contentBefore: @escaping () -> ContentBefore, content: @escaping (Data.Element) -> Content) {
         self.data = data
         self.dataId = id
+        self.contentBefore = contentBefore
         self.content = content
     }
-
 }
 
 extension WaterfallGrid where ID == Data.Element.ID, Data.Element : Identifiable {
@@ -115,9 +119,10 @@ extension WaterfallGrid where ID == Data.Element.ID, Data.Element : Identifiable
     ///
     /// - Parameter data: A collection of identified data.
     /// - Parameter content: A function that can be used to generate content on demand given underlying data.
-    public init(_ data: Data, content: @escaping (Data.Element) -> Content) {
+    public init(_ data: Data, @ViewBuilder contentBefore: @escaping () -> ContentBefore, content: @escaping (Data.Element) -> Content) {
         self.data = data
         self.dataId = \Data.Element.id
+        self.contentBefore = contentBefore
         self.content = content
     }
 

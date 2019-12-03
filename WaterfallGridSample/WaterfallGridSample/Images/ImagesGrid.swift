@@ -16,7 +16,7 @@ struct ImagesGrid: View {
 
         #if os(iOS) && !targetEnvironment(macCatalyst)
 
-        return WaterfallGrid((images), id: \.self) { image in
+        return WaterfallGrid((images), id: \.self, contentBefore: {EmptyView()}) { image in
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)

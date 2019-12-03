@@ -16,7 +16,7 @@ struct RectanglesGrid: View {
 
         #if os(iOS) && !targetEnvironment(macCatalyst)
 
-        return WaterfallGrid(rectangles) { rectangle in
+        return WaterfallGrid(rectangles, contentBefore: {EmptyView()}) { rectangle in
             RectangleView(rectangle: rectangle, scrollDirection: scrollDirection)
         }
         .gridStyle(
