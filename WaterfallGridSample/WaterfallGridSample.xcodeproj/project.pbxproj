@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4064F12396B83200CDE757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4064F02396B83200CDE757 /* AppDelegate.swift */; };
+		1E4064F32396B83200CDE757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4064F22396B83200CDE757 /* SceneDelegate.swift */; };
+		1E4064F52396B83300CDE757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4064F42396B83300CDE757 /* ContentView.swift */; };
+		1E4064F72396B83F00CDE757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4064F62396B83F00CDE757 /* Assets.xcassets */; };
+		1E4064FA2396B83F00CDE757 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4064F92396B83F00CDE757 /* Preview Assets.xcassets */; };
+		1E4064FD2396B83F00CDE757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4064FB2396B83F00CDE757 /* LaunchScreen.storyboard */; };
+		1E551C802396BB130061EE85 /* CardsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EADE85235E541000D9F615 /* CardsContainer.swift */; };
+		1E551C812396BB2C0061EE85 /* CardsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA205236254E900F7CECD /* CardsGrid.swift */; };
+		1E551C822396BB2F0061EE85 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EADE87235E778600D9F615 /* CardView.swift */; };
+		1E551C832396BB320061EE85 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BC57C92360B06B00505B55 /* Card.swift */; };
+		1E551C842396BB360061EE85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B18852360E562002A4AC8 /* Settings.swift */; };
+		1E551C852396BB390061EE85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B188A2360F6C9002A4AC8 /* SettingsView.swift */; };
+		1E551C862396BB3C0061EE85 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FCEBB2361A9D700E87B12 /* Screen.swift */; };
+		1E551C872396BB480061EE85 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E74A236264C500485327 /* Generator.swift */; };
+		1E551C882396BB4B0061EE85 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E74F23626D0E00485327 /* View+Extension.swift */; };
+		1E551C892396BB4E0061EE85 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203EAB5B235F02C100CC96B8 /* LoremIpsum.swift */; };
+		1E551C8A2396BB5C0061EE85 /* RectanglesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA1FB2362501900F7CECD /* RectanglesGrid.swift */; };
+		1E551C8B2396BB5F0061EE85 /* RectanglesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A2D26C2358A89C00CB5CEB /* RectanglesContainer.swift */; };
+		1E551C8C2396BB610061EE85 /* EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E7452362631600485327 /* EditMode.swift */; };
+		1E551C8D2396BB630061EE85 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40541D4E2357DE9700B77014 /* RectangleView.swift */; };
+		1E551C8E2396BB660061EE85 /* RectangleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40541D502357DEFB00B77014 /* RectangleModel.swift */; };
+		1E551C8F2396BB960061EE85 /* ImagesGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA200236253AB00F7CECD /* ImagesGrid.swift */; };
+		1E551C902396BB990061EE85 /* ImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40075AC4235939EC008C0D1C /* ImagesContainer.swift */; };
+		1E551C912396BBAC0061EE85 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4054A936235928160026CC38 /* Shared.xcassets */; };
+		1E551C932396BC030061EE85 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 1E551C922396BC030061EE85 /* WaterfallGrid */; };
 		20397145235F60C6000B1300 /* CardsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EADE85235E541000D9F615 /* CardsContainer.swift */; };
 		203EAB5C235F02C100CC96B8 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203EAB5B235F02C100CC96B8 /* LoremIpsum.swift */; };
 		203EAB5D235F02C100CC96B8 /* LoremIpsum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203EAB5B235F02C100CC96B8 /* LoremIpsum.swift */; };
@@ -143,6 +168,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E4064EE2396B83200CDE757 /* WaterfallGridSample iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WaterfallGridSample iOS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4064F02396B83200CDE757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E4064F22396B83200CDE757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1E4064F42396B83300CDE757 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1E4064F62396B83F00CDE757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E4064F92396B83F00CDE757 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E4064FC2396B83F00CDE757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E4064FE2396B83F00CDE757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203EAB5B235F02C100CC96B8 /* LoremIpsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsum.swift; sourceTree = "<group>"; };
 		205FCEBB2361A9D700E87B12 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		20A2D26C2358A89C00CB5CEB /* RectanglesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglesContainer.swift; sourceTree = "<group>"; };
@@ -200,6 +233,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E4064EB2396B83200CDE757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E551C932396BC030061EE85 /* WaterfallGrid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		405059D62357E41900FB8691 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +276,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E4064EF2396B83200CDE757 /* WaterfallGridSample iOS2 */ = {
+			isa = PBXGroup;
+			children = (
+				1E4064F02396B83200CDE757 /* AppDelegate.swift */,
+				1E4064F22396B83200CDE757 /* SceneDelegate.swift */,
+				1E4064F42396B83300CDE757 /* ContentView.swift */,
+				1E4064F62396B83F00CDE757 /* Assets.xcassets */,
+				1E4064FB2396B83F00CDE757 /* LaunchScreen.storyboard */,
+				1E4064FE2396B83F00CDE757 /* Info.plist */,
+				1E4064F82396B83F00CDE757 /* Preview Content */,
+			);
+			path = "WaterfallGridSample iOS2";
+			sourceTree = "<group>";
+		};
+		1E4064F82396B83F00CDE757 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1E4064F92396B83F00CDE757 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		2044E8FA23605AFD00BDAE3F /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +434,7 @@
 				40C290962332F91C002406AB /* WaterfallGrid */,
 				405059F72357E57300FB8691 /* WaterfallGridSample */,
 				405059DA2357E41900FB8691 /* WaterfallGridSample iOS */,
+				1E4064EF2396B83200CDE757 /* WaterfallGridSample iOS2 */,
 				40505A1F2357E93F00FB8691 /* WaterfallGridSample macOS */,
 				405059FE2357E5D200FB8691 /* WaterfallGridSample tvOS */,
 				40505A4B2357EDA900FB8691 /* WaterfallGridSample watchOS WatchKit App */,
@@ -389,6 +453,7 @@
 				40505A442357EDA800FB8691 /* WaterfallGridSample watchOS.app */,
 				40505A472357EDA900FB8691 /* WaterfallGridSample watchOS WatchKit App.app */,
 				40505A562357EDAD00FB8691 /* WaterfallGridSample watchOS WatchKit Extension.appex */,
+				1E4064EE2396B83200CDE757 /* WaterfallGridSample iOS2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -434,6 +499,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E4064ED2396B83200CDE757 /* WaterfallGridSample iOS2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4064FF2396B83F00CDE757 /* Build configuration list for PBXNativeTarget "WaterfallGridSample iOS2" */;
+			buildPhases = (
+				1E4064EA2396B83200CDE757 /* Sources */,
+				1E4064EB2396B83200CDE757 /* Frameworks */,
+				1E4064EC2396B83200CDE757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WaterfallGridSample iOS2";
+			packageProductDependencies = (
+				1E551C922396BC030061EE85 /* WaterfallGrid */,
+			);
+			productName = "WaterfallGridSample iOS2";
+			productReference = 1E4064EE2396B83200CDE757 /* WaterfallGridSample iOS2.app */;
+			productType = "com.apple.product-type.application";
+		};
 		405059D82357E41900FB8691 /* WaterfallGridSample iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 405059EA2357E41D00FB8691 /* Build configuration list for PBXNativeTarget "WaterfallGridSample iOS" */;
@@ -554,10 +639,13 @@
 		40C290692332F912002406AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Paolo Leonardi";
 				TargetAttributes = {
+					1E4064ED2396B83200CDE757 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					405059D82357E41900FB8691 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -592,6 +680,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1E4064ED2396B83200CDE757 /* WaterfallGridSample iOS2 */,
 				405059D82357E41900FB8691 /* WaterfallGridSample iOS */,
 				40505A1D2357E93F00FB8691 /* WaterfallGridSample macOS */,
 				405059FC2357E5D200FB8691 /* WaterfallGridSample tvOS */,
@@ -603,6 +692,17 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E4064EC2396B83200CDE757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4064FD2396B83F00CDE757 /* LaunchScreen.storyboard in Resources */,
+				1E4064FA2396B83F00CDE757 /* Preview Assets.xcassets in Resources */,
+				1E551C912396BBAC0061EE85 /* Shared.xcassets in Resources */,
+				1E4064F72396B83F00CDE757 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		405059D72357E41900FB8691 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -665,6 +765,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E4064EA2396B83200CDE757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E551C812396BB2C0061EE85 /* CardsGrid.swift in Sources */,
+				1E4064F12396B83200CDE757 /* AppDelegate.swift in Sources */,
+				1E551C842396BB360061EE85 /* Settings.swift in Sources */,
+				1E551C8B2396BB5F0061EE85 /* RectanglesContainer.swift in Sources */,
+				1E551C8C2396BB610061EE85 /* EditMode.swift in Sources */,
+				1E551C8D2396BB630061EE85 /* RectangleView.swift in Sources */,
+				1E551C852396BB390061EE85 /* SettingsView.swift in Sources */,
+				1E551C832396BB320061EE85 /* Card.swift in Sources */,
+				1E551C8A2396BB5C0061EE85 /* RectanglesGrid.swift in Sources */,
+				1E551C902396BB990061EE85 /* ImagesContainer.swift in Sources */,
+				1E551C862396BB3C0061EE85 /* Screen.swift in Sources */,
+				1E551C892396BB4E0061EE85 /* LoremIpsum.swift in Sources */,
+				1E551C8F2396BB960061EE85 /* ImagesGrid.swift in Sources */,
+				1E551C872396BB480061EE85 /* Generator.swift in Sources */,
+				1E4064F32396B83200CDE757 /* SceneDelegate.swift in Sources */,
+				1E4064F52396B83300CDE757 /* ContentView.swift in Sources */,
+				1E551C822396BB2F0061EE85 /* CardView.swift in Sources */,
+				1E551C8E2396BB660061EE85 /* RectangleModel.swift in Sources */,
+				1E551C882396BB4B0061EE85 /* View+Extension.swift in Sources */,
+				1E551C802396BB130061EE85 /* CardsContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		405059D52357E41900FB8691 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,6 +904,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1E4064FB2396B83F00CDE757 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E4064FC2396B83F00CDE757 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		405059E62357E41D00FB8691 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -812,6 +947,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E4065002396B83F00CDE757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WaterfallGridSample iOS2/Preview Content\"";
+				DEVELOPMENT_TEAM = JQ7389Q38X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WaterfallGridSample iOS2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.pku.ss.No1901210574.WaterfallGridSample-iOS2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E4065012396B83F00CDE757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WaterfallGridSample iOS2/Preview Content\"";
+				DEVELOPMENT_TEAM = JQ7389Q38X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WaterfallGridSample iOS2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.pku.ss.No1901210574.WaterfallGridSample-iOS2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		405059EB2357E41D00FB8691 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1196,6 +1373,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E4064FF2396B83F00CDE757 /* Build configuration list for PBXNativeTarget "WaterfallGridSample iOS2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4065002396B83F00CDE757 /* Debug */,
+				1E4065012396B83F00CDE757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		405059EA2357E41D00FB8691 /* Build configuration list for PBXNativeTarget "WaterfallGridSample iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1262,6 +1448,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E551C922396BC030061EE85 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaterfallGrid;
+		};
 		40505A152357E60600FB8691 /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WaterfallGrid;
